@@ -1,0 +1,37 @@
+.container__rows {
+    display: flex;
+    justify-content: space-between;
+    background: turquoise;
+    margin: 10px auto;
+    width: 80%;
+}
+
+.item__rigth {
+    display: flex;
+}
+
+.item__left {
+    display: flex;
+}
+
+.item__left p {
+    padding: 2px;
+}
+
+.item__info {
+    display: flex;
+    flex-direction: column;
+}
+
+.item__info > div {
+    display: flex;
+}
+
+.item__info p {
+    padding: 2px;
+}
+
+.item__img {
+    width: 60px;
+    height: 60px;
+}
