@@ -2,10 +2,10 @@ import React from 'react'
 import RowsItem from './RowsItem/RowsItem'
 
 
-export const Table = ({data}) => {
+export const Table = ({data, handleSelectFilter}) => {
     return (
         <div className="container__table">
-            <RowsItem data={data}/>
+            <RowsItem handleSelectFilter={handleSelectFilter} data={data}/>
         </div>
     )
 }

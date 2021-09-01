@@ -1,9 +1,9 @@
 import React from "react";
 import "./styles.css";
 
-export default function RowsItem({ data }) {
-  const handleLenguage = () => {
-    console.log("hola");
+export default function RowsItem({ data,handleSelectFilter }) {
+  const handleLenguage = (e) => {
+    handleSelectFilter(e.target.textContent)
   };
 
   return (
@@ -16,8 +16,12 @@ export default function RowsItem({ data }) {
               <div className="item__info">
                 <div>
                   <p>{item.company}</p>
-                  <p>New</p>
-                  <p>Featured</p>
+                  {
+                    item.new && <p>new</p>
+                  }
+                  {
+                    item.featured && <p>featured</p>
+                  }
                 </div>
                 <div>
                   <p>{item.position}</p>
@@ -30,6 +34,8 @@ export default function RowsItem({ data }) {
               </div>
             </div>
             <div className="item__left">
+                <p onClick={handleLenguage}>{item.role}</p>
+                <p onClick={handleLenguage}>{item.level}</p>
               {item.languages.map((lenguage, index) => {
                 return (
                   <p onClick={handleLenguage} key={lenguage}>
@@ -37,6 +43,15 @@ export default function RowsItem({ data }) {
                   </p>
                 );
               })}
+              {
+                item.tools.length > 0 ? (
+                  item.tools.map(tool => {
+                    return (
+                      <p onClick={handleLenguage} key={tool}>{tool}</p>
+                    )
+                  })
+                  ): null
+              }
             </div>
           </div>
         );

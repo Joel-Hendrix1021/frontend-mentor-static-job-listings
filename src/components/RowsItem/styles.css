@@ -1,21 +1,30 @@
 .container__rows {
     display: flex;
     justify-content: space-between;
-    background: turquoise;
+    background: #40e0d0;
+    align-items: center;
     margin: 10px auto;
     width: 80%;
+    height: 10rem;
 }
 
 .item__rigth {
     display: flex;
+    align-items: center;
 }
 
 .item__left {
     display: flex;
+    justify-content: start;
+    width: 32rem;
 }
 
 .item__left p {
-    padding: 2px;
+    padding: 1rem;
+    margin: auto 0.5rem;
+    background: cornflowerblue;
+    border-radius: 1rem;
+    cursor: pointer;
 }
 
 .item__info {
@@ -35,3 +44,4 @@
     width: 60px;
     height: 60px;
 }
+
