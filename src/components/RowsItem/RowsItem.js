@@ -12,24 +12,24 @@ export default function RowsItem({ data,handleSelectFilter }) {
         return (
           <div className="container__rows" key={item.id}>
             <div className="item__rigth">
-              <img className="item__img" src={item.logo} alt="" />
+              <img className="item__img" src={item.logo} alt={item.company} />
               <div className="item__info">
                 <div>
-                  <p>{item.company}</p>
+                  <p className="item__company">{item.company}</p>
                   {
-                    item.new && <p>new</p>
+                    item.new && <p className="new">new!</p>
                   }
                   {
-                    item.featured && <p>featured</p>
+                    item.featured && <p className="featured">featured</p>
                   }
                 </div>
                 <div>
-                  <p>{item.position}</p>
+                  <p className="item__position">{item.position}</p>
                 </div>
-                <div>
+                <div className="item__grey">
                   <p>{item.postedAt}</p>
-                  <p>{item.contract}</p>
-                  <p>{item.location}</p>
+                  <p><span className="item__circle"></span>{item.contract}</p>
+                  <p><span className="item__circle"></span>{item.location}</p>
                 </div>
               </div>
             </div>

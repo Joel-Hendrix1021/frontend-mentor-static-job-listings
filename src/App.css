@@ -1,7 +1,10 @@
-.App {
-  text-align: center;
-}
-
 html {
   font-size: 62.5%;
+
 }
+
+.App {
+  text-align: center;
+  font-size: 1.5rem;
+}
+

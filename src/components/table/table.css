@@ -1,0 +1,10 @@
+.container__table {
+    width: 90%;
+    margin: auto;
+}
+
+@media (min-width:800px) {
+    .container__table {
+        width: 80%;
+    }
+}

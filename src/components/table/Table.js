@@ -1,5 +1,6 @@
 import React from 'react'
-import RowsItem from './RowsItem/RowsItem'
+import RowsItem from '../RowsItem/RowsItem'
+import './table.css'
 
 
 export const Table = ({data, handleSelectFilter}) => {

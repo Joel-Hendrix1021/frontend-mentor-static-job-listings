@@ -1,8 +1,8 @@
 
 import Dbdata from "./data.json"
 import './App.css';
-import Header from './components/Header';
-import { Table } from "./components/Table";
+import Header from './components/header/Header';
+import { Table } from "./components/table/Table";
 import { useEffect, useState } from "react";
 import ContainerFilter from "./components/ContainerFilter/ContainerFilter";
 
@@ -15,7 +15,6 @@ function App() {
   }, [itemFilter])
 
   const filterSkills=({languages,level,role,tools})=>{
-
        if(itemFilter.length === 0){
          return true
        }
@@ -36,6 +35,11 @@ const removeFilter=(n)=>{
   setItemFilter(itemFilter.filter(item=> item !==n))
  
 }
+
+const clearRemove=()=>{
+  setItemFilter([])
+}
+
 //filtra basado en filterskills si es true devuelve el array
 const listSkills = data.filter(fil=> filterSkills(fil))
 
@@ -43,7 +47,10 @@ const listSkills = data.filter(fil=> filterSkills(fil))
   return (
     <div className="App">
       <Header/>
-        <ContainerFilter removeFilter={removeFilter} itemFilter={itemFilter}/>
+        {
+          itemFilter.length >0 && <ContainerFilter removeFilter={removeFilter} itemFilter={itemFilter} clearRemove={clearRemove}/>
+        }
+       
        <Table handleSelectFilter={handleSelectFilter} data={listSkills}/>
     </div>
   );
