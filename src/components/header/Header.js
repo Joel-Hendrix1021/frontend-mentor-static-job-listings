@@ -1,13 +1,8 @@
-import React from 'react'
-import './header.css'
-
+import React from "react";
+import "./header.css";
 
 function Header() {
-    return (
-        <header className="header">
-            
-        </header>
-    )
+  return <header className="header" />;
 }
 
-export default Header
+export default Header;

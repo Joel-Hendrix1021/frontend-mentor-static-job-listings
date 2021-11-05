@@ -1,9 +1,9 @@
 import React from "react";
 import "./styles.css";
 
-export default function RowsItem({ data,handleSelectFilter }) {
+const RowsItem = ({ data, handleSelectFilter }) => {
   const handleLenguage = (e) => {
-    handleSelectFilter(e.target.textContent)
+    handleSelectFilter(e.target.textContent);
   };
 
   return (
@@ -16,46 +16,54 @@ export default function RowsItem({ data,handleSelectFilter }) {
               <div className="item__info">
                 <div>
                   <p className="item__company">{item.company}</p>
-                  {
-                    item.new && <p className="new">new!</p>
-                  }
-                  {
-                    item.featured && <p className="featured">featured</p>
-                  }
+                  {item.new && <p className="new">new!</p>}
+                  {item.featured && <p className="featured">featured</p>}
                 </div>
                 <div>
                   <p className="item__position">{item.position}</p>
                 </div>
                 <div className="item__grey">
                   <p>{item.postedAt}</p>
-                  <p><span className="item__circle"></span>{item.contract}</p>
-                  <p><span className="item__circle"></span>{item.location}</p>
+                  <p>
+                    <span className="item__circle" />
+                    {item.contract}
+                  </p>
+                  <p>
+                    <span className="item__circle" />
+                    {item.location}
+                  </p>
                 </div>
               </div>
             </div>
             <div className="item__left">
-                <p onClick={handleLenguage}>{item.role}</p>
-                <p onClick={handleLenguage}>{item.level}</p>
-              {item.languages.map((lenguage, index) => {
+              <button type="button" onClick={handleLenguage}>
+                {item.role}
+              </button>
+              <button type="button" onClick={handleLenguage}>
+                {item.level}
+              </button>
+              {item.languages.map((lenguage) => {
                 return (
-                  <p onClick={handleLenguage} key={lenguage}>
+                  <button type="button" onClick={handleLenguage} key={lenguage}>
                     {lenguage}
-                  </p>
+                  </button>
                 );
               })}
-              {
-                item.tools.length > 0 ? (
-                  item.tools.map(tool => {
+              {item.tools.length > 0
+                ? item.tools.map((tool) => {
                     return (
-                      <p onClick={handleLenguage} key={tool}>{tool}</p>
-                    )
+                      <button type="button" onClick={handleLenguage} key={tool}>
+                        {tool}
+                      </button>
+                    );
                   })
-                  ): null
-              }
+                : null}
             </div>
           </div>
         );
       })}
     </>
   );
-}
+};
+
+export default RowsItem;

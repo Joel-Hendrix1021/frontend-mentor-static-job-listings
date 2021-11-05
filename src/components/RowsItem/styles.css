@@ -94,7 +94,9 @@
    
 }
 
-.item__left p {
+.item__left  button{
+    outline: none;
+    border: none;
     font-size: 12px;
     font-weight: 700;
     color:#5ba4a4;
