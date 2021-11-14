@@ -10,7 +10,10 @@ const RowsItem = ({ data, handleSelectFilter }) => {
     <>
       {data.map((item) => {
         return (
-          <div className="container__rows" key={item.id}>
+          <div
+            className={`container__rows ${item.featured && "border_left"}`}
+            key={item.id}
+          >
             <div className="item__rigth">
               <img className="item__img" src={item.logo} alt={item.company} />
               <div className="item__info">

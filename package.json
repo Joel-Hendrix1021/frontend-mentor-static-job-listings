@@ -2,6 +2,7 @@
   "name": "static-job-list",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://joel-hendrix1021.github.io/static-job-list",
   "dependencies": {
     "cra-template": "1.1.2",
     "react": "^17.0.2",
@@ -9,6 +10,8 @@
     "react-scripts": "4.0.3"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
