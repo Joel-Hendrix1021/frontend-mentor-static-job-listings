@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
-import Dbdata from "./data.json";
+import dataDb from "./data";
 import "./App.css";
 import Header from "./components/header/Header";
 import Table from "./components/table/Table";
 import ContainerFilter from "./components/ContainerFilter/ContainerFilter";
 
 function App() {
-  const [data, setData] = useState(Dbdata);
+  const [data, setData] = useState(dataDb);
   const [itemFilter, setItemFilter] = useState([]);
 
   useEffect(() => {
-    setData(Dbdata);
+    setData(dataDb);
   }, [itemFilter]);
 
   const filterSkills = ({ languages, level, role, tools }) => {
