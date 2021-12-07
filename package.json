@@ -1,8 +1,8 @@
 {
-  "name": "static-job-list",
+  "name": "job-list",
   "version": "0.1.0",
   "private": true,
-  "homepage": " https://joel-hendrix1021.github.io/static-job/",
+  "homepage": " https://joel-hendrix1021.github.io/job-list/",
  
   "dependencies": {
     "cra-template": "1.1.2",
