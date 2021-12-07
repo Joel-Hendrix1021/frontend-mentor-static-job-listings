@@ -2,6 +2,7 @@
   "name": "static-job-list",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://Joel-Hendrix1021.github.io/static-job-list/",
   "dependencies": {
     "cra-template": "1.1.2",
     "react": "^17.0.2",
