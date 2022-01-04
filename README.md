@@ -1,6 +1,6 @@
 # Frontend Mentor - Job listings with filtering
 
-![Design preview for the Job listings with filtering coding challenge](./design/desktop-preview.jpg)
+<img src="https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/vvnh7nisat28lbces76t.jpg"/>
 
 ## Welcome! 👋
 
